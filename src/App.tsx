@@ -4,13 +4,13 @@ import Header from './components/header/Header'
 import MovieGrid from './components/grid/MovieGrid'
 
 const App = () => {
-
+	const [searchString, setSearchString] = useState<string>('')
 	return (
-		<>
-			<Header />
-			<MovieGrid />
-		</>
-	)
+    <>
+      <Header searchString={searchString} />
+      <MovieGrid searchString={searchString} />
+    </>
+  );
 }
 
 export default App

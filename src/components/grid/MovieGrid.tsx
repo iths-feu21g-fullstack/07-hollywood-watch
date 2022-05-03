@@ -1,43 +1,26 @@
+import { useState } from 'react'
 import './Grid.css'
+import { Movie } from '../../models/Movie'
+import { testData } from './movieData'
 
-const MovieGrid = () => (
-  <main className='card-grid'>
-    <section className='card '>
-      <div className='image'> image </div>
-      <h3> My neighbour Totoro </h3>
-      <p> 2021-09-28 </p>
-    </section>
 
-    <section className='card'>
-      <div className='image'> image </div>
-      <h3> My neighbour Totoro </h3>
-      <p> 2021-09-28 </p>
-    </section>
+interface Props {
+  searchString: string;
+}
+const MovieGrid = (props: Props) => {
+	const [movies, setMovies] = useState<Movie[]>(testData)
 
-    <section className='card'>
-      <div className='image'> image </div>
-      <h3> My neighbour Totoro </h3>
-      <p> 2021-09-28 </p>
-    </section>
-
-    <section className='card'>
-      <div className='image'> image </div>
-      <h3> My neighbour Totoro </h3>
-      <p> 2021-09-28 </p>
-    </section>
-
-    <section className='card'>
-      <div className='image'> image </div>
-      <h3> My neighbour Totoro </h3>
-      <p> 2021-09-28 </p>
-    </section>
-
-    <section className='card'>
-      <div className='image'> image </div>
-      <h3> My neighbour Totoro </h3>
-      <p> 2021-09-28 </p>
-    </section>
-  </main>
-);
+	return (
+    <main className='card-grid'>
+      {movies.map((movie) => (
+        <section key={movie.id} className='card'>
+          <div className='image'> {movie.imageUrl} </div>
+          <h3> {movie.title} </h3>
+          <p> {movie.premiereDate} </p>
+        </section>
+      ))}
+    </main>
+  );
+};
 
 export default MovieGrid
