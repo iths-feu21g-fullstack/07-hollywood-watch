@@ -1,0 +1,46 @@
+/* För att illustrera React components */
+.component {
+	border: 2px dashed red;
+}
+
+body {
+	background-color: #262937;
+}
+
+header {
+	text-align: center;
+}
+
+h1 {
+	color: #e78917;
+}
+
+header input {
+	font-size: 1.5em;
+	padding: 0.4em;
+}
+
+.magnify-search {
+	font-size: 1.5em;
+	display: inline-block;
+	position: relative;
+	left: -2em;
+}
+
+.card .image {
+	background-color: #eadba8;
+	height: 5em;
+}
+
+.card {
+	background-color: #808fdf;
+	text-align: center;
+	max-width: 20em;
+}
+
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1.5em;
+	padding: 1em;
+}
