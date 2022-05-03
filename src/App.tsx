@@ -7,7 +7,7 @@ const App = () => {
 	const [searchString, setSearchString] = useState<string>('')
 	return (
     <>
-      <Header searchString={searchString} />
+      <Header searchString={searchString} setSearchString={setSearchString} />
       <MovieGrid searchString={searchString} />
     </>
   );
