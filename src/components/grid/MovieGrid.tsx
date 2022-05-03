@@ -1,4 +1,4 @@
-
+import './Grid.css'
 
 const MovieGrid = () => (
   <main className='card-grid'>

@@ -1,0 +1,19 @@
+header {
+	text-align: center;
+}
+
+header h1 {
+	color: #e78917;
+}
+
+header input {
+	font-size: 1.5em;
+	padding: 0.4em;
+}
+
+header .magnify-search {
+	font-size: 1.5em;
+	display: inline-block;
+	position: relative;
+	left: -2em;
+}
